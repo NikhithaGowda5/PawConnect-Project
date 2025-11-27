@@ -11,7 +11,7 @@ public class DeliveryDAOImpl implements DeliveryDAO{
      public boolean placeOrder(Delivery order) {
     	 try{
         	Connection con=DBConnection.getConnector();
-			PreparedStatement ps=con.prepareStatement("INSERT INTO delivery_orders(fullName, phone, email, address, item, quantity, status) VALUES (?, ?, ?, ?, ?, ?,?)");
+			PreparedStatement ps=con.prepareStatement("INSERT INTO delivery_orders(fullName, phone, email, address, product, quantity, status) VALUES (?, ?, ?, ?, ?, ?,?)");
             ps.setString(1, order.getFullName());
             ps.setLong(2, order.getPhone());
             ps.setString(3, order.getAddress());
