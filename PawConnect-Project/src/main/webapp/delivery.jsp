@@ -685,6 +685,8 @@
             <div class="products-grid">
                 <!-- FOOD PRODUCTS (15 items) -->
                 <div class="product-card" data-category="food">
+        <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="101"></form>
                     <img src="https://tse3.mm.bing.net/th/id/OIP.tyXDh-6GfWpnevGnd3rmTwHaKU?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Premium Dog Food">
                     <div class="product-info">
                         <h3>Premium Dog Food</h3>
@@ -697,6 +699,8 @@
                 </div>
                 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="102"></form>
                     <img src="https://i5.walmartimages.com/asr/6ed276d9-367f-4c82-bc41-eaa026403735_3.668f8e07361b35a854e0beaad956ee9d.png" alt="Cat Food">
                     <div class="product-info">
                         <h3>Grain-Free Cat Food</h3>
@@ -709,6 +713,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="103"></form>
                     <img src="https://i5.walmartimages.com/asr/5206b93d-6d04-4b13-98a9-4058f7419d03.9ac8536e6a30e45b00fa0ed01ba9e76b.jpeg" alt="Puppy Food">
                     <div class="product-info">
                         <h3>Puppy Dry Food</h3>
@@ -721,6 +727,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="104"></form>
                     <img src="https://th.bing.com/th/id/OPAC.VXgM2eZb79ZP4w474C474?w=592&h=550&o=5&dpr=1.3&pid=21.1&ucfimg=1" alt="Senior Dog Food">
                     <div class="product-info">
                         <h3>Senior Dog Food</h3>
@@ -733,6 +741,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="105"></form>
                     <img src="https://m.media-amazon.com/images/I/81Q9NIks1BL.AC.jpg" alt="Bird Food">
                     <div class="product-info">
                         <h3>Bird Seed Mix</h3>
@@ -745,6 +755,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="106"></form>
                     <img src="https://m.media-amazon.com/images/I/81BMZZXwm0L.AC.jpg" alt="Fish Food">
                     <div class="product-info">
                         <h3>Fish Food Flakes</h3>
@@ -757,6 +769,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="107"></form>
                     <img src="https://tse4.mm.bing.net/th/id/OIP.sy7YjimK2W3inJRnVvznzQHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Dental Dog Food">
                     <div class="product-info">
                         <h3>Dental Care Dog Food</h3>
@@ -769,6 +783,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="108"></form>
                     <img src="https://i5.walmartimages.com/asr/297459ae-645c-45d4-acd5-6b608fa74756_1.e7ea5b0c607eb4d3c300595005b362f3.jpeg" alt="Weight Management Food">
                     <div class="product-info">
                         <h3>Weight Management Cat Food</h3>
@@ -781,6 +797,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="109"></form>
                     <img src="https://www.rover.com/blog/wp-content/uploads/2021/04/best-organic-dog-treats-2.jpg" alt="Dog Treats">
                     <div class="product-info">
                         <h3>Organic Dog Treats</h3>
@@ -793,6 +811,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="110"></form>
                     <img src="https://m.media-amazon.com/images/I/81XeRHi9oWL.SL1500.jpg" alt="Wet Cat Food">
                     <div class="product-info">
                         <h3>Kitten Wet Food</h3>
@@ -805,6 +825,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="111"></form>
                     <img src="https://i5.walmartimages.com/seo/MENU-Premium-Rabbit-Food-Timothy-Hay-Pellets-Blend-Vitamin-Mineral-Fortified-4-lb-Bag_4c84c114-6606-4238-b619-be8088242ddd.fdfd6c9cb93342d5f37ae8886bb27b51.jpeg" alt="Rabbit Food">
                     <div class="product-info">
                         <h3>Rabbit Pellets</h3>
@@ -817,6 +839,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="112"></form>
                     <img src="https://tse4.mm.bing.net/th/id/OIP.vX62ZlSCHz5ePk7t_gCZ3AHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hypoallergenic Food">
                     <div class="product-info">
                         <h3>Hypoallergenic Dog Food</h3>
@@ -829,6 +853,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="113"></form>
                     <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r992-ln6vjodncl3be8" alt="Hamster Food">
                     <div class="product-info">
                         <h3>Hamster Food Mix</h3>
@@ -841,6 +867,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="114"></form>
                     <img src="https://i5.walmartimages.com/seo/Nutrish-Senior-Healthy-Aging-Chicken-Chickpea-and-Salmon-Dry-Cat-Food-Rachael-Ray-13-lb-Bag_ce03a8b5-1f90-4876-971f-84bedeccd284.c93105517ce679ca5dc3429dfe4ca601.jpeg" alt="Senior Cat Food">
                     <div class="product-info">
                         <h3>Senior Cat Food</h3>
@@ -853,6 +881,8 @@
                 </div>
 
                 <div class="product-card" data-category="food">
+                <form action="delivery" method="post">
+		<input type="hidden" name="product_id" value="115"></form>
                     <img src="https://i5.walmartimages.com/seo/Pure-Balance-Pro-Large-Breed-Chicken-Brown-Rice-Recipe-Dry-Dog-Food-16-lbs_38f7a1f2-fc61-4362-a35b-69fdf350645d.a7d18fc3cc8ed8744d12d6091146381e.jpeg" alt="Large Breed Food">
                     <div class="product-info">
                         <h3>Large Breed Dog Food</h3>
@@ -1383,7 +1413,6 @@
                     </div>
                 </div>
 
-               
 
                 <div class="product-card" data-category="accessories">
                     <img src="https://m.media-amazon.com/images/I/61+yHQu8RwL.AC.jpg" alt="Automatic Feeder">
@@ -1418,6 +1447,7 @@
             </div>
         </div>
     </section>
+    
     <h2>Add to Cart</h2>
 	<form action="delivery" method="post">
 		<input type="hidden" name="action" value="addToCart">

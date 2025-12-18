@@ -92,8 +92,8 @@ public class DeliveryServlet extends HttpServlet {
         AddCartDAO dao = new AddCartDAOImpl();
 
         if (dao.addToCart(cart))
-            resp.sendRedirect("cart.jsp?added=success");
+            resp.sendRedirect("delivery.jsp?added=success");
         else
-            resp.sendRedirect("cart.jsp?added=fail");
+            resp.sendRedirect("delivery.jsp?added=fail");
     }
 }

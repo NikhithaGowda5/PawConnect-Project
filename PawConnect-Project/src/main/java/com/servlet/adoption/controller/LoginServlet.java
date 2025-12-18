@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
     	            // Create session
     	            HttpSession session = req.getSession();
     	            session.setAttribute("user", user);
-    	            resp.sendRedirect("pet.jsp");  // Redirect to homepage
+    	            resp.sendRedirect("pets.jsp");  // Redirect to homepage
     	        } else {
     	            req.setAttribute("message", "Invalid Email or Password!");
     	            req.getRequestDispatcher("home.jsp").forward(req, resp);
