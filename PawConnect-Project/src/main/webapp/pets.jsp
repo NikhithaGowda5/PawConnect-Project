@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <%@ include file="header.jsp" %>
+   <jsp:include page="header.jsp" />
     <div class="main-content">
     
     <section class="pets-section">
@@ -456,7 +456,7 @@
         <div class="modal-content" style="background: white; max-width: 500px; margin: 50px auto; padding: 30px; border-radius: 15px; position: relative;">
             <span onclick="closeAdoptionForm()" style="position: absolute; right: 20px; top: 15px; font-size: 30px; cursor: pointer; color: #000; font-weight: bold;">&times;</span>
             <h2 id="modalTitle">Adoption Application</h2>
-            <form action="adoption-process.jsp" method="post">
+            <form  action ="AdoptServlet"  method="post">
                 <input type="hidden" id="petId" name="petId">
                 <input type="hidden" id="petName" name="petName">
                 
@@ -485,7 +485,7 @@
                     <textarea id="message" name="message" rows="4"></textarea>
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Submit Application</button>
+                <button type="submit" class="btn btn-primary" >Submit Application</button>
             </form>
         </div>
     </div>
@@ -494,6 +494,7 @@
     <%@ include file="footer.jsp" %>
     
     <script>
+    
     function openAdoptionForm(petId, petName) {
 	    <%
 	    if(session.getAttribute("user") == null) {

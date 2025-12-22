@@ -6,12 +6,12 @@ import com.servlet.adoption.dao.UserDAO;
 import com.servlet.adoption.dao.UserDAOImpl;
 import com.servlet.adoption.dto.User;
 import com.servlet.adoption.util.PasswordHash;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 
 @WebServlet("/register")
@@ -25,7 +25,7 @@ public class RegisterServlet extends HttpServlet {
 
         String fullName = req.getParameter("fullName");
         String email = req.getParameter("email");
-        String phone = req.getParameter("phone");
+        Long phone = Long.parseLong(req.getParameter("phone"));
         String password = req.getParameter("password");
         String confirmPassword = req.getParameter("confirmPassword");
 
@@ -46,15 +46,19 @@ public class RegisterServlet extends HttpServlet {
         // Hash the password
         String hashedPassword = PasswordHash.hashPassword(password);
 
-        User user = new User(fullName,email, Long.parseLong(phone), hashedPassword);
+        User user = new User(fullName,email, phone, hashedPassword);
 
         boolean isRegistered = userDAO.registerUser(user);
 
         if (isRegistered) {
+        	HttpSession session = req.getSession();
+            session.setAttribute("email", email);
+            session.setAttribute("userName", fullName);
             resp.sendRedirect("login.jsp");
         } else {
             req.setAttribute("message", "Registration failed. Try again!");
             req.getRequestDispatcher("register.jsp").forward(req, resp);
         }
+        
     }
 }

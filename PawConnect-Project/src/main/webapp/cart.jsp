@@ -6,74 +6,167 @@
 <title>My Cart</title>
 
 <style>
+:root {
+    --primary: #8B5FBF;    
+    --secondary: #6A4C93;  
+    --accent: #FF9E7A;     
+    --light: #FFFFFF;      
+    --dark: #4A4458;       
+    --text: #5D576B;       
+    --gradient-primary: linear-gradient(135deg, #8B5FBF 0%, #6A4C93 100%);
+    --gradient-light: linear-gradient(135deg, #FFFFFF 0%, #F8F7FF 100%);
+}
+
 body {
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
+    background: var(--gradient-light);
+    color: var(--text);
     padding: 30px;
 }
+
 .container {
     max-width: 900px;
     margin: auto;
-    background: #ffffff;
+    background: var(--light);
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
+
 h2 {
     text-align: center;
     margin-bottom: 25px;
+    color: var(--primary);
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
 }
+
 th, td {
     padding: 12px;
     text-align: center;
 }
+
 th {
-    background: #343a40;
-    color: white;
+    background: var(--dark);
+    color: var(--light);
 }
+
 td {
     border-bottom: 1px solid #ddd;
 }
+
 .qty-btn {
     padding: 5px 10px;
     font-size: 14px;
     cursor: pointer;
+    background: var(--secondary);
+    color: var(--light);
+    border: none;
+    border-radius: 5px;
 }
+
+.qty-btn:hover {
+    background: var(--primary);
+}
+
 .remove-btn {
     background: #dc3545;
-    color: white;
+    color: var(--light);
     border: none;
     padding: 6px 10px;
     cursor: pointer;
+    border-radius: 5px;
 }
+
+.remove-btn:hover {
+    background: #b02a37;
+}
+
 .summary {
     text-align: right;
     margin-top: 20px;
     font-size: 18px;
+    color: var(--dark);
 }
+
 .actions {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
+
 .actions button {
     padding: 12px 20px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    flex: 1;
 }
+
 .order-btn {
-    background: #28a745;
-    color: white;
+    background: var(--accent);
+    color: var(--light);
 }
+
+.order-btn:hover {
+    background: var(--secondary);
+}
+
 .cancel-btn {
-    background: #6c757d;
-    color: white;
+    background: var(--dark);
+    color: var(--light);
+}
+
+.cancel-btn:hover {
+    background: #343a40;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        background: var(--light);
+        margin-bottom: 15px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    td {
+        text-align: left;
+        padding: 8px 0;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--text);
+    }
+
+    .qty-btn {
+        padding: 5px 8px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
 }
 </style>
 </head>
@@ -127,15 +220,15 @@ function renderCart() {
 
         tbody.innerHTML += `
             <tr>
-                <td>${item.name}</td>
-                <td>${item.price}</td>
-                <td>
+                <td data-label="Product">${item.name}</td>
+                <td data-label="Price">${item.price}</td>
+                <td data-label="Quantity">
                     <button class="qty-btn" onclick="updateQty(${index}, -1)">−</button>
                     ${item.quantity}
                     <button class="qty-btn" onclick="updateQty(${index}, 1)">+</button>
                 </td>
-                <td>${item.total}</td>
-                <td>
+                <td data-label="Total">${item.total}</td>
+                <td data-label="Action">
                     <button class="remove-btn" onclick="removeItem(${index})">
                         Remove
                     </button>

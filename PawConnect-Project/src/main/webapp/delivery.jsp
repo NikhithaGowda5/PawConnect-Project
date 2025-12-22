@@ -1448,53 +1448,7 @@
         </div>
     </section>
     
-    <h2>Add to Cart</h2>
-	<form action="delivery" method="post">
-		<input type="hidden" name="action" value="addToCart">
-
-		<label>FullName:</label>
-		<input type="text" name="fullName" required>
-
-		<label>Product:</label>
-		<input type="text" name="product" required>
-
-		<label>Price:</label>
-		<input type="number" name="price" step="0.01" required>
-
-		<label>Quantity:</label>
-		<input type="number" name="quantity" required>
-
-		<button type="submit">Add to Cart</button>
-	</form>
-
-    <h2>Place Delivery Order</h2>
-	<form action="delivery" method="post">
-		<input type="hidden" name="action" value="placeOrder">
-
-		<label>Full Name:</label>
-		<input type="text" name="fullName" required>
-
-		<label>Phone:</label>
-		<input type="number" name="phone" required>
-
-		<label>Address:</label>
-		<input type="text" name="address" required>
-
-		<label>Product:</label>
-		<input type="text" name="product" required>
-
-		<label>Quantity:</label>
-		<input type="number" name="quantity" required>
-
-		<button type="submit">Place Order</button>
-	</form>
-	
-	<h2>Update Delivery Status</h2>
-	<form action="delivery" method="post">
-		<input type="hidden" name="action" value="updateStatus">
-
-		<label>Order ID:</label>
-		<input type="number" name="orderId" required>
+   
 
 		<label>Status:</label>
 		<select name="status">

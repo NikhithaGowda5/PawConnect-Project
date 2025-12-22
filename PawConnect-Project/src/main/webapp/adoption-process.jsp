@@ -2,7 +2,7 @@
 <%
 // Check if user is logged in
 if(session.getAttribute("user") == null) {
-    response.sendRedirect("login.jsp?redirect=pet.jsp");
+    response.sendRedirect("login.jsp?redirect=pets.jsp");
     return;
 }
 
@@ -19,5 +19,5 @@ String message = request.getParameter("message");
 // For demo, we'll just show a success message
 
 // Redirect back to pets page with success message
-response.sendRedirect("pet.jsp?adoption=success&pet=" + petName);
+response.sendRedirect("pets.jsp?adoption=success&pet=" + petName);
 %>

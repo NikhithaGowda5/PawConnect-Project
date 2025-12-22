@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <%@ include file="header.jsp" %>
+<jsp:include page="header.jsp" />
     
     <section class="contact-section">
         <div class="container">
@@ -24,14 +24,14 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                            <h3>Address</h3>
-            <p>Agara, Bengaluru, Karnataka - 560068</p>
+            <p>J.P.Nagar,Bengaluru, Karnataka - 560068</p>
         </div>
     </div>
     <div class="contact-item">
         <i class="fas fa-phone"></i>
         <div>
             <h3>Phone</h3>
-            <p>+91 9988776655</p>
+            <p>+91 9972918755</p>
         </div>
     </div>
     <div class="contact-item">

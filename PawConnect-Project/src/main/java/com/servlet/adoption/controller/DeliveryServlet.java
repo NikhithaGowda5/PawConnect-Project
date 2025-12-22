@@ -2,8 +2,6 @@ package com.servlet.adoption.controller;
 
 import java.io.IOException;
 
-import com.servlet.adoption.dao.AddCartDAO;
-import com.servlet.adoption.dao.AddCartDAOImpl;
 import com.servlet.adoption.dao.DeliveryDAO;
 import com.servlet.adoption.dao.DeliveryDAOImpl;
 import com.servlet.adoption.model.AddCart;
@@ -89,11 +87,11 @@ public class DeliveryServlet extends HttpServlet {
                 Integer.parseInt(req.getParameter("quantity"))
         );
 
-        AddCartDAO dao = new AddCartDAOImpl();
+        //AddCartDAO dao = new AddCartDAOImpl();
 
-        if (dao.addToCart(cart))
+        //if (dao.addToCart(cart))
             resp.sendRedirect("delivery.jsp?added=success");
-        else
+        //else
             resp.sendRedirect("delivery.jsp?added=fail");
     }
 }

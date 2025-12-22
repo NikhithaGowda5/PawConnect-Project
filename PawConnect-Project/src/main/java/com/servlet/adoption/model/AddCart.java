@@ -57,5 +57,10 @@ public class AddCart {
 		this.quantity = quantity;
 	}
 
+	public void setAddedDate(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
     
 }

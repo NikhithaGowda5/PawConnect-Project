@@ -48,13 +48,22 @@ h2 { text-align: center; }
 </head>
 
 <body>
+<%
+    String email = (String) session.getAttribute("email");
 
+    if (email == null) {
+        // Not logged in → redirect to login
+        response.sendRedirect("login.jsp?redirect=payment.jsp");
+        return;
+    }
+%>
 <div class="container">
     <h2>💳 Payment</h2>
 
     <div class="summary">
         <p><b>Order ID:</b> <%=request.getParameter("orderId")%></p>
         <p><b>Amount:</b> ₹<%=request.getParameter("amount")%></p>
+        
     </div>
 
     <h3>Select Payment Method</h3>
@@ -164,7 +173,8 @@ function confirmOrder() {
     window.location.href =
         "orderSuccess.jsp?orderId=" + orderId +
         "&amount=" + amount +
-        "&mode=" + selectedMode;
+        "&selectMode=" + selectedMode +
+        "&email=<%= email %>";
 }
 
 function cancel() {

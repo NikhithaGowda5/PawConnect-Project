@@ -70,12 +70,13 @@
     <p>Thank you for your interest in adopting a pet.</p>
 
     <div class="details-box">
-        <p><strong>Pet ID:</strong> <%= session.getAttribute("petId") %></p>
+        <p><strong>Pet Name:</strong> <%= session.getAttribute("petName") %></p>
         <p><strong>Full Name:</strong> <%= session.getAttribute("fullName") %></p>
         <p><strong>Email:</strong> <%= session.getAttribute("email") %></p>
         <p><strong>Phone:</strong> <%= session.getAttribute("phone") %></p>
         <p><strong>Address:</strong> <%= session.getAttribute("address") %></p>
         <p><strong>Message:</strong> <%= session.getAttribute("message") %></p>
+        <li><a href="certificate.jsp">MY CERTIFICATES</a></li>
     </div>
 
     <button class="btn-home" onclick="window.location.href='index.jsp'">Go Back Home</button>

@@ -27,15 +27,15 @@
                 <ul class="footer-links">
                     <li><a href="pets.jsp">Pet Adoption</a></li>
                     <li><a href="#">Pet Supplies</a></li>
-                    <li><a href="#">Veterinary Care</a></li>
+                    <li><a href="vet-care.jsp">Veterinary Care</a></li>
                     <li><a href="#">Pet Training</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Contact Us</h3>
                 <ul class="footer-links">
-                    <li><i class="fas fa-map-marker-alt"></i> Agara, Bengaluru, Karnataka - 560068</li>
-                    <li><i class="fas fa-phone"></i> +91 9988776655</li>
+                    <li><i class="fas fa-map-marker-alt"></i> J.P.Nagar, Bengaluru, Karnataka - 560068</li>
+                    <li><i class="fas fa-phone"></i> +91 9972918755</li>
                     <li><i class="fas fa-envelope"></i> info@pawconnect.com</li>
                 </ul>
             </div>

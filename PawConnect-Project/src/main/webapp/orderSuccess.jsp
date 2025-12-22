@@ -75,6 +75,7 @@ h2 {
 <body>
 
 <div class="card" id="invoice">
+<h1>PawConnect🐾</h1>
     <div class="check">✔</div>
     <h2>Order Placed Successfully</h2>
     <p>Thank you for your purchase 🐾</p>
@@ -82,6 +83,8 @@ h2 {
     <div class="info">
         <p><b>Order ID:</b> <span id="orderId"></span></p>
 <p><b>Amount Paid:</b> ₹<span id="amount"></span></p>
+<p><strong>Confirmation sent to:</strong> <%= request.getParameter("email") %></p>
+
     </div>
 
     <!-- Order Tracking -->

@@ -1,7 +1,7 @@
-
 package com.servlet.adoption.dto;
 
 	public class User {
+		
 	    private String fullName;
 	    private String email;
 	    private Long phone;
@@ -10,7 +10,7 @@ package com.servlet.adoption.dto;
 	    public User() {}
 
 	    public User(String fullName, String email, Long phone, String password) {
-	        this.fullName = fullName;
+	    	this.fullName = fullName;
 	        this.email = email;
 	        this.phone = phone;
 	        this.password = password;

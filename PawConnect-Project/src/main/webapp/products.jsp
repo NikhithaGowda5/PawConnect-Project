@@ -6,61 +6,163 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-<title>Products</title>
+<title>Pet Products</title>
 
 <style>
-body { font-family: Arial; background:#f4f6f8; 
-       width:100%}
-.grid { display:flex; flex-wrap:wrap; gap:20px; }
+:root {
+    --primary: #8B5FBF;    
+    --secondary: #6A4C93;  
+    --accent: #FF9E7A;     
+    --light: #FFFFFF;      
+    --dark: #4A4458;       
+    --text: #5D576B;       
+    --gradient-primary: linear-gradient(135deg, #8B5FBF 0%, #6A4C93 100%);
+    --gradient-light: linear-gradient(135deg, #FFFFFF 0%, #F8F7FF 100%);
+    --gradient-hero: linear-gradient(135deg, #8B5FBF 0%, #6A4C93 50%, #FFFFFF 100%);
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--gradient-light);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: var(--primary);
+    color: var(--light);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+header a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    padding: 30px 40px;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* ===== CARD ===== */
 .card {
-    width:220px; background:white; padding:15px;
-    border-radius:8px; text-align:center;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    width: 220px;
+    background: var(--light);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-img { width:100%; height:150px; object-fit:contain; }
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    margin: 8px 0;
+    color: var(--dark);
+}
+
+/* ===== QUANTITY ===== */
 .qty-box {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-    margin:10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0;
 }
+
 .qty-btn {
-    width:30px;
-    height:30px;
-    font-size:18px;
-    background:#007bff;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    background: var(--secondary);
+    color: var(--light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
 .qty {
-    font-size:16px;
-    min-width:20px;
+    font-size: 16px;
+    min-width: 20px;
 }
-button.cart-btn {
-    background:#28a745;
-    color:white;
-    border:none;
-    padding:8px;
-    width:100%;
-    border-radius:5px;
+
+/* ===== BUTTON ===== */
+.cart-btn {
+    background: var(--accent);
+    color: var(--light);
+    border: none;
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+.cart-btn:hover {
+    background: var(--secondary);
+}
+
+/* ===== TOTAL ===== */
 .total {
-    font-weight:bold;
-    margin-top:5px;
+    font-weight: bold;
+    margin: 5px 0 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
 }
 </style>
 </head>
 
 <body>
-<div>
-<h2 align="center">Pet Products</h2>
-<h2 align="right"><a href="cart.jsp">🛒 View Cart</a></h2>
-<div>
+
+<!-- ===== HEADER ===== -->
+<header>
+    <h1>PawConnect – Pet Products</h1>
+    <a href="cart.jsp">🛒 View Cart</a>
+</header>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main>
 <div class="grid">
+
 <%
 List<Product> list = (List<Product>) request.getAttribute("products");
 
@@ -68,12 +170,12 @@ if (list != null && !list.isEmpty()) {
     int index = 0;
     for (Product p : list) {
 %>
+
 <div class="card">
     <img src="<%=p.getImageUrl()%>">
     <h4><%=p.getProductName()%></h4>
     <p>Price: ₹<span id="price-<%=index%>"><%=p.getPrice()%></span></p>
-    
-    <!-- Quantity Controls -->
+
     <div class="qty-box">
         <button class="qty-btn" onclick="changeQty(<%=index%>, -1)">−</button>
         <span class="qty" id="qty-<%=index%>">0</span>
@@ -87,6 +189,7 @@ if (list != null && !list.isEmpty()) {
         Add to Cart
     </button>
 </div>
+
 <%
         index++;
     }
@@ -96,7 +199,14 @@ if (list != null && !list.isEmpty()) {
 <%
 }
 %>
+
 </div>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    © 2025 PawConnect | All Rights Reserved
+</footer>
 
 <script>
 function changeQty(index, change) {
@@ -113,33 +223,11 @@ function changeQty(index, change) {
 
 function addToCart(name, price, index) {
     let qty = parseInt(document.getElementById("qty-" + index).innerText);
-    if (qty === 0) {
-        alert("Please select quantity");
-        return;
-    }
-
-    let total = qty * price;
-    let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
-
-    cart.push({
-        name: name,
-        price: price,
-        quantity: qty,
-        total: total
-    });
-
-    sessionStorage.setItem("cart", JSON.stringify(cart));
-    alert("Added to Cart");
-}
-function addToCart(name, price, index) {
-    let qty = parseInt(document.getElementById("qty-" + index).innerText);
 
     if (qty === 0) {
         alert("Please select quantity");
         return;
     }
-
-    let total = qty * price;
 
     let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 
@@ -147,18 +235,13 @@ function addToCart(name, price, index) {
         name: name,
         price: price,
         quantity: qty,
-        total: total
+        total: qty * price
     });
 
     sessionStorage.setItem("cart", JSON.stringify(cart));
-
-    // ✅ Redirect to cart page
     window.location.href = "cart.jsp";
 }
-
 </script>
-
-
 
 </body>
 </html>

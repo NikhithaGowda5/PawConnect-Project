@@ -7,6 +7,7 @@ import java.io.IOException;
 import com.servlet.adoption.dao.ServiceDAOImpl;
 import com.servlet.adoption.model.ServiceBooking;
 
+
 	@WebServlet("/service")
 	public class ServicesBookingServlet extends HttpServlet {
 

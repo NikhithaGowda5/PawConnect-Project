@@ -20,7 +20,7 @@ public class ProductServlet extends HttpServlet {
             throws ServletException, IOException {
 
         List<Product> products = dao.getAllProducts();
-        System.out.println("Products fetched: " + products.size());
+        //System.out.println("Products fetched: " + products.size());
         req.setAttribute("products", products);
         RequestDispatcher rd = req.getRequestDispatcher("products.jsp");
         rd.forward(req, res);
