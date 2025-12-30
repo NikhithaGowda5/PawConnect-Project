@@ -156,7 +156,10 @@ footer {
 <!-- ===== HEADER ===== -->
 <header>
     <h1>PawConnect – Pet Products</h1>
-    <a href="cart.jsp">🛒 View Cart</a>
+    <div>
+    <a href="cart.jsp">🛒 View Cart</a><br><br>
+    <a href="index.jsp"> Back To Home</a>
+    </div>
 </header>
 
 <!-- ===== MAIN CONTENT ===== -->

@@ -450,7 +450,7 @@
         </div>
     </section>
 
-    <!-- Adoption Form Modal -->
+
     <!-- Adoption Form Modal - FIXED SCROLLING -->
     <div id="adoptionModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; overflow: auto; padding: 20px 0;">
         <div class="modal-content" style="background: white; max-width: 500px; margin: 50px auto; padding: 30px; border-radius: 15px; position: relative;">

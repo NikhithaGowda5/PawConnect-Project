@@ -81,9 +81,14 @@ h2 {
     <p>Thank you for your purchase 🐾</p>
 
     <div class="info">
-        <p><b>Order ID:</b> <span id="orderId"></span></p>
-<p><b>Amount Paid:</b> ₹<span id="amount"></span></p>
-<p><strong>Confirmation sent to:</strong> <%= request.getParameter("email") %></p>
+        <p><b>Order ID:</b> <%=request.getParameter("orderId")%></p>
+        <p><b>Amount:</b> ₹<%=request.getParameter("amount")%></p>
+        <%
+String email = (String) session.getAttribute("email");
+%>
+
+<p><strong>Confirmation sent to:</strong> <%= email %></p>
+</p>
 
     </div>
 

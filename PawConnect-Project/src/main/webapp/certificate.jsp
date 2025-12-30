@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,13 +34,13 @@
 
     .pet1 { top: 20px; left: 20px; width: 180px; }
     .pet2 { top: 30px; right: 20px; width: 160px; }
-    .pet3 { bottom: 20px; left: 30px; width: 170px; }
+    .pet3 { bottom: 30px; left: 30px; width: 170px; }
    .pet4 {
    padding: top:200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 550px;
     width: 400px;
 }
 .a{
@@ -55,7 +56,7 @@ display: flex;
         position: relative;
         z-index: 2;
         text-align: center;
-        padding: 30px;
+        padding: 5px;
     }
 
     h1 {
@@ -68,7 +69,7 @@ display: flex;
     .sub {
         font-size: 18px;
         color: #555;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .name {
@@ -83,17 +84,23 @@ display: flex;
         color: #333;
         margin-bottom: 15px;
     }
+    
+    .fullname {
+        font-size: 30px;
+        color: #333;
+        margin-bottom: 10px;
+    }
 
     .details {
         font-size: 18px;
         color: #444;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .footer {
         display: flex;
         justify-content: space-between;
-        margin-top: 60px;
+        margin-top: 35px;
         font-size: 16px;
     }
 
@@ -127,9 +134,13 @@ display: flex;
     <!-- Certificate Content -->
     <div class="content">
         <h1>Certificate of Adoption</h1>
-        <div class="sub">This certificate proudly recognizes</div>
+        <div class="sub">By</div>
 
         <div class="name">PawConnect</div>
+        
+        <div class="sub">This certificate is proudly presented to</div>
+
+    <div class="fullname"><%= session.getAttribute("fullName") %></div>
 
         <div class="sub">for lovingly adopting</div>
 
@@ -139,7 +150,7 @@ display: flex;
         
         <div class="details"> 
         <ul> 
-        <li><a href="certificateDownload.jsp">DOWNLOAD CERTIFICATES</a></li> 
+        <li><a style="color:#c59d5f;font-weight: bold; " href="certificateDownload.jsp">DOWNLOAD CERTIFICATES</a></li> 
         </ul> 
         <span><strong>Adoption ID:</strong> ADP-2025</span> <br><span><strong>Issued By:</strong> PawConnect Adoption Center</span> </div>
 

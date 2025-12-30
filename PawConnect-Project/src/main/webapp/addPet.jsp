@@ -1,4 +1,4 @@
-https://m.media-amazon.com/images/I/71QD5K4gBuL._AC_UF894,1000_QL80_.jpg<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>

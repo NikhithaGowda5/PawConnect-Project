@@ -82,14 +82,16 @@
                         <button class="learn-more-btn">Shop Now</button>
                     </div>
                     
+                    
+                    
                     <!-- Veterinary Support Card -->
-                    <div class="feature-card" onclick="window.location.href='My-adoptions.jsp'">
+                    <div class="feature-card" onclick="window.location.href='vet-care.jsp'">
                         <div class="feature-icon">
-                            <i class="fas fa-paw"></i>
+                            <i class="fas fa-user-md"></i>
                         </div>
-                        <h3>Adopted Pets </h3>
-                        <p>See the pets you have Adopted</p>
-                        <button class="learn-more-btn">View Adoptions</button>
+                        <h3>Veterinary Support</h3>
+                        <p>Access our network of trusted veterinarians for your pet's health needs.</p>
+                        <button class="learn-more-btn">Book Appointment</button>
                     </div>
                 </div>
             </div>

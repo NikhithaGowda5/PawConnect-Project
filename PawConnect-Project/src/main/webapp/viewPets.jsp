@@ -76,12 +76,27 @@
             font-size: 18px;
             margin-top: 50px;
         }
+        .back-btn {
+    margin-top: 20px;
+    display: inline-block;
+    background: #6a1b9a;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    background: #4a148c;
+}
     </style>
+    
 </head>
 
 <body>
 
 <h1>All Pets - Admin</h1>
+
 <%
     List<Pets> pets = (List<Pets>) request.getAttribute("pets");
 %>
@@ -136,6 +151,7 @@
     }
 %>
 </div>
+<a href="adminDashboard.jsp" class="back-btn">⬅ Back to Dashboard</a>
 
 </body>
 </html>

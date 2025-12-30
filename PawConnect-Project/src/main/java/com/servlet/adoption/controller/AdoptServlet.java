@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.List;
+import java.util.Properties;
 
 import com.servlet.adoption.dao.AdoptionDAO;
 import com.servlet.adoption.dao.AdoptionDAOImpl;
@@ -17,14 +18,25 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+import jakarta.mail.*;
+import jakarta.mail.internet.*;
+
 @WebServlet("/AdoptServlet")
 public class AdoptServlet extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+
+    // Your Gmail credentials
+    private static final String FROM_EMAIL = "nikhithaks2004@gmail.com";
+    private static final String APP_PASSWORD = "jygj tzfh lchm jyov";
+    
 	private AdoptionDAO adoptionDAO = new AdoptionDAOImpl();
 
 	@Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
-
+		
+		 HttpSession session = req.getSession();
 		 try {
 	            int petId = Integer.parseInt(req.getParameter("petId"));
 	            String petName = req.getParameter("petName");
@@ -55,7 +67,7 @@ public class AdoptServlet extends HttpServlet {
 	                req.getSession().setAttribute("address", address);
 	                req.getSession().setAttribute("message", message);
 
-	                res.sendRedirect("adoption-success.jsp");
+	                res.sendRedirect("adoption-success.jsp?request=sent");
 	            } else {
 	            	res.sendRedirect("pets.jsp?error=notSaved");
 	            }
@@ -85,7 +97,7 @@ public class AdoptServlet extends HttpServlet {
 	        ps.setString(6, message);
 
 	        ps.executeUpdate();
-
+	        sendConfirmationEmail(email, fullName, petName);
 	        // store email in session for My-Adoptions
 	        req.getSession().setAttribute("email", email);
 
@@ -96,4 +108,40 @@ public class AdoptServlet extends HttpServlet {
 	    }
 	}
 
-}
+	private void sendConfirmationEmail(String toemail, String fullName, String petName) {
+		Properties props = new Properties();
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+
+        Session mailSession = Session.getInstance(props,
+                new Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(FROM_EMAIL, APP_PASSWORD);
+                    }
+                });
+
+        try {
+            Message message = new MimeMessage(mailSession);
+            message.setFrom(new InternetAddress(FROM_EMAIL));
+            message.setRecipients(Message.RecipientType.TO,
+                    InternetAddress.parse(toemail));
+            message.setSubject("🐾 Adoption Request Submitted – PawConnect");
+
+            message.setText(
+            		"Hello " + fullName + ",\n\n" +
+                            "You have been successfully adopted \"" + petName + "\" " +
+                            "Please Download Your Adoption Certificate .\n\n" +
+                            "Thank you for choosing PawConnect 🐶🐱\n\n" +
+                            "Regards,\n PawConnect Team"
+                        );
+
+                        Transport.send(message);
+                        System.out.println("User confirmation email sent");
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+	}

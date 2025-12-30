@@ -19,14 +19,14 @@
                     <li><a href="index.jsp">Home</a></li>
                     <li><a href="pets.jsp">Adopt a Pet</a></li>
                     <li><a href="about.jsp">About Us</a></li>
-                    <li><a href="contact.jsp">Contact</a></li>
+                    <li><a href="products">Products for Your Pets</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Services</h3>
                 <ul class="footer-links">
                     <li><a href="pets.jsp">Pet Adoption</a></li>
-                    <li><a href="#">Pet Supplies</a></li>
+                    <li><a href="products.jsp">Pet Supplies</a></li>
                     <li><a href="vet-care.jsp">Veterinary Care</a></li>
                     <li><a href="#">Pet Training</a></li>
                 </ul>

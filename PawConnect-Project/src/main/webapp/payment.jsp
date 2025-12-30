@@ -57,6 +57,7 @@ h2 { text-align: center; }
         return;
     }
 %>
+<p><strong>Your EmailID:</strong> <%= email %></p>
 <div class="container">
     <h2>💳 Payment</h2>
 
@@ -108,12 +109,15 @@ h2 { text-align: center; }
             <p>No payment required now.</p>
         </div>
     </div>
-
-    <button id="confirmBtn" class="btn pay-btn"
+<form id="paymentForm" action="orderSuccess" method="post">
+<input type="hidden" name="orderId" id="orderId">
+    <input type="hidden" name="amount" id="amount">
+    <button type="submit" id="confirmBtn" class="btn pay-btn"
         onclick="confirmOrder()" disabled>
     Confirm Order
 </button>
 <button class="btn cancel-btn" onclick="cancel()">Cancel</button>
+</form>
 </div>
 
 <script>
@@ -169,7 +173,10 @@ function confirmOrder() {
     const params = new URLSearchParams(window.location.search);
     const orderId = params.get("orderId");
     const amount = params.get("amount");
-
+    document.getElementById("orderId").value = orderId;
+    document.getElementById("amount").value = amount;
+   
+    document.getElementById("paymentForm").submit();
     window.location.href =
         "orderSuccess.jsp?orderId=" + orderId +
         "&amount=" + amount +
