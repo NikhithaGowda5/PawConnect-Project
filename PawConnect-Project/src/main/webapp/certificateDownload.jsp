@@ -171,7 +171,6 @@ h1 {
             and committing to provide care, safety and unconditional love forever
         </div>
         <div class="sub">
-            <strong>Adoption ID:</strong> ADP-2025 <br>
             <strong>Issued By:</strong> PawConnect Adoption Center
         </div>
 
@@ -181,7 +180,7 @@ h1 {
             </div>
 
             <div class="signature">
-                Roshini
+                Nikhitha
                 <div class="line"></div>
                 Signature
             </div>

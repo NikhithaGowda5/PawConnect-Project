@@ -152,14 +152,14 @@ display: flex;
         <ul> 
         <li><a style="color:#c59d5f;font-weight: bold; " href="certificateDownload.jsp">DOWNLOAD CERTIFICATES</a></li> 
         </ul> 
-        <span><strong>Adoption ID:</strong> ADP-2025</span> <br><span><strong>Issued By:</strong> PawConnect Adoption Center</span> </div>
+        <span><strong>Issued By:</strong> PawConnect Adoption Center</span> </div>
 
         <div class="footer">
             <div class="signature">
                 Adoption Authority
             </div>
             <div class="signature">
-            Roshini
+            Nikhitha
                 <div class="line"></div>
                 Signature<br>
                 

@@ -68,7 +68,6 @@ public class PetDAOImpl implements PetDAO {
             e.printStackTrace();
         }
 
-        System.out.println("Fetched pets count: " + list.size()); // 🔥 DEBUG
         return list;
     }
 
@@ -126,7 +125,7 @@ public class PetDAOImpl implements PetDAO {
             ps.setInt(8, pet.getPet_Id());
 
             int rows = ps.executeUpdate();
-            System.out.println("UPDATE ROWS: " + rows);
+            //System.out.println("UPDATE ROWS: " + rows);
             return rows > 0;
 
         } catch (SQLException e) {

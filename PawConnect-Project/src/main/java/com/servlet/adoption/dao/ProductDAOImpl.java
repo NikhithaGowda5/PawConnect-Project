@@ -27,7 +27,7 @@ public class ProductDAOImpl implements ProductDAO{
                 p.setPrice(rs.getDouble("price"));
                 p.setImageUrl(rs.getString("image_url"));
                 list.add(p);
-                System.out.println("Fetched product: " + p.getProductName()+ " " + p.getPrice());
+                //System.out.println("Fetched product: " + p.getProductName()+ " " + p.getPrice());
             }
 
             System.out.println("TOTAL PRODUCTS: " + list.size());
