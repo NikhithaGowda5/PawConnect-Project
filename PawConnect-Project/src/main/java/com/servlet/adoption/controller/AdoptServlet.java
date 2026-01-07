@@ -132,7 +132,7 @@ public class AdoptServlet extends HttpServlet {
             message.setText(
             		"Hello " + fullName + ",\n\n" +
                             "You have been successfully adopted \"" + petName + "\" " +
-                            "Please Download Your Adoption Certificate .\n\n" +
+                            "Please Download Your Adoption Certificate from PawConnect Application.\n\n" +
                             "Thank you for choosing PawConnect 🐶🐱\n\n" +
                             "Regards,\n PawConnect Team"
                         );
