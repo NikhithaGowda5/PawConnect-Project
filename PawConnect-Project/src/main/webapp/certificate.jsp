@@ -159,7 +159,7 @@ display: flex;
                 Adoption Authority
             </div>
             <div class="signature">
-            Nikhitha K S
+            Nikhitha
                 <div class="line"></div>
                 Signature<br>
                 
