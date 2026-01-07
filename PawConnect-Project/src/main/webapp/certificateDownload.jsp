@@ -180,7 +180,7 @@ h1 {
             </div>
 
             <div class="signature">
-                Nikhitha
+                Nikhitha K S
                 <div class="line"></div>
                 Signature
             </div>
